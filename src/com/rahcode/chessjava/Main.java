@@ -1,7 +1,7 @@
 package com.rahcode.chessjava;
 
 import java.awt.EventQueue;
-
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -18,8 +18,13 @@ public class Main extends JFrame {
 	JLabel[] sqrs = new JLabel[64];
 	int piece = 0;
 	
-	public void move(int piece){
-		System.out.println(piece);
+	public void move(int piece, int moveTo){
+		if (piece != moveTo) {			
+			Icon pieceIcon = sqrs[piece - 1].getIcon();
+			
+			sqrs[moveTo - 1].setIcon(pieceIcon);
+			sqrs[piece - 1].setIcon(null);
+		}
 	}
 
 	public static void main(String[] args) {
@@ -51,7 +56,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 1;
 				} else {
-					move(piece);
+					move(piece, 1);
 					piece = 0;
 				}
 			}
@@ -67,7 +72,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 2;
 				} else {
-					move(piece);
+					move(piece, 2);
 					piece = 0;
 				}
 			}
@@ -83,7 +88,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 3;
 				} else {
-					move(piece);
+					move(piece, 3);
 					piece = 0;
 				}
 			}
@@ -99,7 +104,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 4;
 				} else {
-					move(piece);
+					move(piece, 4);
 					piece = 0;
 				}
 			}
@@ -115,7 +120,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 5;
 				} else {
-					move(piece);
+					move(piece, 5);
 					piece = 0;
 				}
 			}
@@ -131,7 +136,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 6;
 				} else {
-					move(piece);
+					move(piece, 6);
 					piece = 0;
 				}
 			}
@@ -147,7 +152,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 7;
 				} else {
-					move(piece);
+					move(piece, 7);
 					piece = 0;
 				}
 			}
@@ -163,7 +168,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 8;
 				} else {
-					move(piece);
+					move(piece, 8);
 					piece = 0;
 				}
 			}
@@ -179,7 +184,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 9;
 				} else {
-					move(piece);
+					move(piece, 9);
 					piece = 0;
 				}
 			}
@@ -195,7 +200,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 10;
 				} else {
-					move(piece);
+					move(piece, 10);
 					piece = 0;
 				}
 			}
@@ -211,7 +216,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 11;
 				} else {
-					move(piece);
+					move(piece, 11);
 					piece = 0;
 				}
 			}
@@ -227,7 +232,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 12;
 				} else {
-					move(piece);
+					move(piece, 12);
 					piece = 0;
 				}
 			}
@@ -243,7 +248,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 13;
 				} else {
-					move(piece);
+					move(piece, 13);
 					piece = 0;
 				}
 			}
@@ -259,7 +264,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 14;
 				} else {
-					move(piece);
+					move(piece, 14);
 					piece = 0;
 				}
 			}
@@ -275,7 +280,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 15;
 				} else {
-					move(piece);
+					move(piece, 15);
 					piece = 0;
 				}
 			}
@@ -291,7 +296,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 16;
 				} else {
-					move(piece);
+					move(piece, 16);
 					piece = 0;
 				}
 			}
@@ -307,7 +312,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 17;
 				} else {
-					move(piece);
+					move(piece, 17);
 					piece = 0;
 				}
 			}
@@ -322,7 +327,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 18;
 				} else {
-					move(piece);
+					move(piece, 18);
 					piece = 0;
 				}
 			}
@@ -337,7 +342,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 19;
 				} else {
-					move(piece);
+					move(piece, 19);
 					piece = 0;
 				}
 			}
@@ -352,7 +357,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 20;
 				} else {
-					move(piece);
+					move(piece, 20);
 					piece = 0;
 				}
 			}
@@ -367,7 +372,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 21;
 				} else {
-					move(piece);
+					move(piece, 21);
 					piece = 0;
 				}
 			}
@@ -382,7 +387,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 22;
 				} else {
-					move(piece);
+					move(piece, 22);
 					piece = 0;
 				}
 			}
@@ -397,7 +402,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 23;
 				} else {
-					move(piece);
+					move(piece, 23);
 					piece = 0;
 				}
 			}
@@ -412,7 +417,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 24;
 				} else {
-					move(piece);
+					move(piece, 24);
 					piece = 0;
 				}
 			}
@@ -427,7 +432,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 25;
 				} else {
-					move(piece);
+					move(piece, 25);
 					piece = 0;
 				}
 			}
@@ -442,7 +447,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 26;
 				} else {
-					move(piece);
+					move(piece, 26);
 					piece = 0;
 				}
 			}
@@ -457,7 +462,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 27;
 				} else {
-					move(piece);
+					move(piece, 27);
 					piece = 0;
 				}
 			}
@@ -472,7 +477,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 28;
 				} else {
-					move(piece);
+					move(piece, 28);
 					piece = 0;
 				}
 			}
@@ -487,7 +492,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 29;
 				} else {
-					move(piece);
+					move(piece, 29);
 					piece = 0;
 				}
 			}
@@ -502,7 +507,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 30;
 				} else {
-					move(piece);
+					move(piece, 30);
 					piece = 0;
 				}
 			}
@@ -517,7 +522,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 31;
 				} else {
-					move(piece);
+					move(piece, 31);
 					piece = 0;
 				}
 			}
@@ -532,7 +537,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 32;
 				} else {
-					move(piece);
+					move(piece, 32);
 					piece = 0;
 				}
 			}
@@ -547,7 +552,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 33;
 				} else {
-					move(piece);
+					move(piece, 33);
 					piece = 0;
 				}
 			}
@@ -562,7 +567,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 34;
 				} else {
-					move(piece);
+					move(piece, 34);
 					piece = 0;
 				}
 			}
@@ -577,7 +582,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 35;
 				} else {
-					move(piece);
+					move(piece, 35);
 					piece = 0;
 				}
 			}
@@ -592,7 +597,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 36;
 				} else {
-					move(piece);
+					move(piece, 36);
 					piece = 0;
 				}
 			}
@@ -607,7 +612,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 37;
 				} else {
-					move(piece);
+					move(piece, 37);
 					piece = 0;
 				}
 			}
@@ -622,7 +627,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 38;
 				} else {
-					move(piece);
+					move(piece, 38);
 					piece = 0;
 				}
 			}
@@ -637,7 +642,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 39;
 				} else {
-					move(piece);
+					move(piece, 39);
 					piece = 0;
 				}
 			}
@@ -652,7 +657,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 40;
 				} else {
-					move(piece);
+					move(piece, 40);
 					piece = 0;
 				}
 			}
@@ -667,7 +672,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 41;
 				} else {
-					move(piece);
+					move(piece, 41);
 					piece = 0;
 				}
 			}
@@ -682,7 +687,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 42;
 				} else {
-					move(piece);
+					move(piece, 42);
 					piece = 0;
 				}
 			}
@@ -697,7 +702,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 43;
 				} else {
-					move(piece);
+					move(piece, 43);
 					piece = 0;
 				}
 			}
@@ -712,7 +717,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 44;
 				} else {
-					move(piece);
+					move(piece, 44);
 					piece = 0;
 				}
 			}
@@ -727,7 +732,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 45;
 				} else {
-					move(piece);
+					move(piece, 45);
 					piece = 0;
 				}
 			}
@@ -742,7 +747,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 46;
 				} else {
-					move(piece);
+					move(piece, 46);
 					piece = 0;
 				}
 			}
@@ -757,7 +762,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 47;
 				} else {
-					move(piece);
+					move(piece, 47);
 					piece = 0;
 				}
 			}
@@ -772,7 +777,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 48;
 				} else {
-					move(piece);
+					move(piece, 48);
 					piece = 0;
 				}
 			}
@@ -787,7 +792,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 49;
 				} else {
-					move(piece);
+					move(piece, 49);
 					piece = 0;
 				}
 			}
@@ -803,7 +808,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 50;
 				} else {
-					move(piece);
+					move(piece, 50);
 					piece = 0;
 				}
 			}
@@ -819,7 +824,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 51;
 				} else {
-					move(piece);
+					move(piece, 51);
 					piece = 0;
 				}
 			}
@@ -835,7 +840,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 52;
 				} else {
-					move(piece);
+					move(piece, 52);
 					piece = 0;
 				}
 			}
@@ -851,7 +856,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 53;
 				} else {
-					move(piece);
+					move(piece, 53);
 					piece = 0;
 				}
 			}
@@ -867,7 +872,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 54;
 				} else {
-					move(piece);
+					move(piece, 54);
 					piece = 0;
 				}
 			}
@@ -883,7 +888,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 55;
 				} else {
-					move(piece);
+					move(piece, 55);
 					piece = 0;
 				}
 			}
@@ -899,7 +904,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 56;
 				} else {
-					move(piece);
+					move(piece, 56);
 					piece = 0;
 				}
 			}
@@ -915,7 +920,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 57;
 				} else {
-					move(piece);
+					move(piece, 57);
 					piece = 0;
 				}
 			}
@@ -931,7 +936,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 58;
 				} else {
-					move(piece);
+					move(piece, 58);
 					piece = 0;
 				}
 			}
@@ -947,7 +952,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 59;
 				} else {
-					move(piece);
+					move(piece, 59);
 					piece = 0;
 				}
 			}
@@ -963,7 +968,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 60;
 				} else {
-					move(piece);
+					move(piece, 60);
 					piece = 0;
 				}
 			}
@@ -979,7 +984,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 61;
 				} else {
-					move(piece);
+					move(piece, 61);
 					piece = 0;
 				}
 			}
@@ -995,7 +1000,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 62;
 				} else {
-					move(piece);
+					move(piece, 62);
 					piece = 0;
 				}
 			}
@@ -1011,7 +1016,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 63;
 				} else {
-					move(piece);
+					move(piece, 63);
 					piece = 0;
 				}
 			}
@@ -1027,7 +1032,7 @@ public class Main extends JFrame {
 				if (piece == 0) {
 					piece = 64;
 				} else {
-					move(piece);
+					move(piece, 64);
 					piece = 0;
 				}
 			}
